@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 
+        之前学的from,to这种动画，它无法达到想先做什么动画，再做什么动画，然后又做什么动画的效果
+        它只能同时去做某一种动画
+
+        这时候需要写百分比动画,先做什么，再做什么，然后做什么
+     -->
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            animation: ani2 2s;
+        }
+
+        /* @keyframes ani{
+
+            from{}
+            to{
+                transform: translateX(800px) scale(1.5);
+            }
+        } */
+
+        @keyframes ani2{
+            /* 从动画一开始，到动画总时长的百分之50,干下面这件事 */
+            /* 从0到百分之40的时间做平移 */
+            40%{
+                transform: translateX(800px);
+            }
+
+            /* 从40%以后到80%用来放大 */
+            80%{
+                /* 在已经到800的基础再放大 */
+                transform: translateX(800px) scale(1.5);
+            }
+
+            /* 80%到90%做旋转 */
+            90%{
+                
+                transform: translateX(800px) scale(1.5) rotate(45deg);
+            }
+
+            /* 剩下的时间如果我们没写，它就代表用剩余的时间动画效果去复原 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
