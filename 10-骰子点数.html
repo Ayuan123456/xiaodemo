@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+
+            width: 260px;
+            height: 260px;
+            border: 1px solid #000;
+            background-color: lightgray;
+
+            border-radius: 20px;
+        }
+
+        li {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #000;
+        }
+
+        .one {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .two {
+            display: flex;
+            /* 修改主轴方向为y轴 */
+            flex-direction: column;
+            /* 主轴用space-around */
+            justify-content: space-around;
+            /* 副轴居中 */
+            align-items: center;
+        }
+
+        .three {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .three li:nth-child(1) {
+
+            margin-top: 10px;
+        }
+
+        .three li:nth-child(2) {
+
+            align-self: center;
+        }
+
+        .three li:nth-child(3) {
+
+            align-self: flex-end;
+            margin-bottom: 10px;
+        }
+
+
+        .end {
+
+            display: flex;
+        }
+
+        .end>div {
+            width: 50%;
+            /* border: 1px solid #000; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        骰：骨头做的，音投
+    -->
+    <ul class="one">
+        <li></li>
+    </ul>
+
+    <ul class="two">
+        <li></li>
+        <li></li>
+    </ul>
+
+    <ul class="three">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <ul class="end">
+
+        <div>
+            <li></li>
+            <li></li>
+        </div>
+
+        <div>
+            <li></li>
+            <li></li>
+        </div>
+    </ul>
+
+    <ul class="end">
+        <div>
+            <li></li>
+            <li></li>
+        </div>
+        <div>
+            <li></li>
+
+        </div>
+        <div>
+            <li></li>
+            <li></li>
+        </div>
+    </ul>
+
+    <ul class="end">
+        <div>
+            <li></li>
+            <li></li>
+            <li></li>
+        </div>
+        <div>
+            <li></li>
+            <li></li>
+            <li></li>
+        </div>
+    </ul>
+    
+</body>
+
+</html>

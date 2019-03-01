@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 
+
+        不知道该去做什么样的动画， 以及设计出一个好看的动画出来
+        因为其实老早有大牛写好了N多个动画效果，把这些动画效果集中在一个文件里，这个文件就叫动画库
+     -->
+
+    <!-- <link rel="stylesheet" href="animate.css"> -->
+
+    <style>
+        @keyframes hinge {
+            0% {
+                -webkit-transform-origin: top left;
+                transform-origin: top left;
+                -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out;
+            }
+
+            20%,
+            60% {
+                -webkit-transform: rotate3d(0, 0, 1, 80deg);
+                transform: rotate3d(0, 0, 1, 80deg);
+                -webkit-transform-origin: top left;
+                transform-origin: top left;
+                -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out;
+            }
+
+            40%,
+            80% {
+                -webkit-transform: rotate3d(0, 0, 1, 60deg);
+                transform: rotate3d(0, 0, 1, 60deg);
+                -webkit-transform-origin: top left;
+                transform-origin: top left;
+                -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out;
+                opacity: 1;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 700px, 0);
+                transform: translate3d(0, 700px, 0);
+                opacity: 0;
+            }
+        }
+
+        img{
+
+            animation:hinge 4s infinite;
+        }
+    </style>
+
+</head>
+
+<body>
+    <img src="images/lq.png" alt="">
+</body>
+
+</html>
